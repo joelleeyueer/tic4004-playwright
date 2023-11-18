@@ -23,7 +23,7 @@ test('cant checkout with empty cart', async ({ browser }) => {
   // Go to cart page and remove item
   await page.click('.shopping_cart_link');
   await page.click('#remove-sauce-labs-backpack');
-  await page.click('.shopping_cart_link');
-  await expect(page).not.toHaveURL('https://www.saucedemo.com/cart.html');
+  await page.click('#checkout');
+  await expect(page).not.toHaveURL('https://www.saucedemo.com/checkout-step-one.html');
 
 });
