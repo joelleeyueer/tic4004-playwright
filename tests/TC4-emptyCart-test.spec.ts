@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('can purchase and checkout', async ({ browser }) => {
+test('cant checkout with empty cart', async ({ browser }) => {
   const page = await browser.newPage();
 
   // Go to login page
